@@ -51,7 +51,7 @@ For comparisons sake we could use one of the top models presented which has a sc
 
 Essentially their model uses different CV techniques to feature engineer and then use an XGboost model to reach their value. This model was actually forked from Hakeem @ https://www.kaggle.com/hakeem/stacked-then-averaged-models-0-5697/code. He achieved a score of around 0.5697 on the public leaderboards.
 
-I will try to get as close as possible to their score using Deep Learning techniques or even try to acheive a better score.
+I will try to get as close as possible to their score using Deep Learning techniques or even try to achieve a better score. Currently the submission only allows the calculation of the 19% of the data, which will be my metric, although I should be aware of overfitting problems.
 
 
 
