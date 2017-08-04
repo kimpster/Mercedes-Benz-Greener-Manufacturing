@@ -56,8 +56,17 @@ I will try to get as close as possible to their score using Deep Learning techni
 
 
 ### Project Design
-_(approx. 1 page)_
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+This project will mainly consist of using Keras and Tensorflow for the backend, essentially I will use a CNN to predict the 'y' values. I would probably attempt this without any dimensional reduction at first, and later apply PCA and ICA and compare which resulted in a better prediction model. This is due to the fact that there are so many features and the baseline discussed above actually used many dimension reduction techniques before applying it to XGboost model.
+
+First I will remove all the irrelevant features, i.e. those which do not contain any additional information all 0s.
+
+Then I will create the following architectures and check them to see which provides the highest accuracy:
+1. MLP
+2. CNN - similar to VGG16
+3. CNN - Similar to Resnet50
+
+I would compare all my findings and optimize base on which creates the best accuracy. I believe if these model are unable to perform well or takes too much time to train I would first do dimensionality reduction and then move on to these models.
+
 
 -----------
