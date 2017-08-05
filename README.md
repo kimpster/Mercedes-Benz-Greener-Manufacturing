@@ -9,18 +9,20 @@ Kimpster @ Github (Ryan Chan)
 
 This project is a kaggle competition that was previously presented. The link is here :https://www.kaggle.com/c/mercedes-benz-greener-manufacturing
 
-Below is an abstract from the problem:
+Below is an abstract from the competition from the link above:
 "Since the first automobile, the Benz Patent Motor Car in 1886, Mercedes-Benz has stood for important automotive innovations. These include, for example, the passenger safety cell with crumple zone, the airbag and intelligent assistance systems. Mercedes-Benz applies for nearly 2000 patents per year, making the brand the European leader among premium car makers. Daimler’s Mercedes-Benz cars are leaders in the premium car industry. With a huge selection of features and options, customers can choose the customized Mercedes-Benz of their dreams. .
 
 To ensure the safety and reliability of each and every unique car configuration before they hit the road, Daimler’s engineers have developed a robust testing system. But, optimizing the speed of their testing system for so many possible feature combinations is complex and time-consuming without a powerful algorithmic approach. As one of the world’s biggest manufacturers of premium cars, safety and efficiency are paramount on Daimler’s production lines.
 
 In this competition, Daimler is challenging Kagglers to tackle the curse of dimensionality and reduce the time that cars spend on the test bench. Competitors will work with a dataset representing different permutations of Mercedes-Benz car features to predict the time it takes to pass testing. Winning algorithms will contribute to speedier testing, resulting in lower carbon dioxide emissions without reducing Daimler’s standards."
 
+Essentially the problem is to predict the time taken on the test bench given the features. The features are essentially different options available for the car.
+
 
 ### Problem Statement
 The problem presented as mentioned earlier is to reduce the time cars spend on the test bench therefore resulting in faster testing and lower carbon dioxide emissions. There are many different features presented each affecting the time on the test bench, this is due the the many selections of options available for each car presented.
 
-The main thing here is the prediction of time on the test bench given the features selected by the customers.
+The main thing here is the prediction of time on the test bench given the features selected by the customers. Given this problem we would use regression techniques for this problem as the prediction 'y' is time values which is continuous data.
 
 
 ### Datasets and Inputs
@@ -41,11 +43,11 @@ SRK analyzed the dataset fully and there are no missing values in the train set.
 
 
 ### Solution Statement
-I will attempt to use Deep Learning techniques to attempt to predict the 'y' values of the test set, and submit onto kaggle. Given that there is late submission, although no prizes but it is still useful to see where our prediction model will place. I have decided to attempt using Deep Learning as the course only explored categorical model using deep learning but not regression and I believe this would be well suited to try since the data is simple and clean. Also majority of models used in this kaggle competition used other machine learning techniques such as XGboost and Random Forest and many Cross Fold validation techniques, I would like to see how Deep Learning compares in a regression problem with so many features.
+I will attempt to use Deep Learning techniques to attempt to predict the 'y' values of the test set, and submit onto kaggle. Given that there is late submission, although no prizes but it is still useful to see where our prediction model will place. I have decided to attempt using Deep Learning as the course only explored categorical model using deep learning but not regression and I believe this would be well suited to try since the data is simple and clean. Also majority of models used in this kaggle competition used other machine learning techniques such as XGboost and Random Forest and many Cross Fold validation techniques, I would like to see how Deep Learning compares in a regression problem with so many features. In this project I will use Convolution Neural Networks and also MLPs as my prediction models.
 
 
 ### Benchmark Model & Evaluation Metrics
-I am going to include a benchmark test which takes the mean of all the 'y' values in the train dataset and apply to the submission. I recieved a -0.00039 score. The scoring mechanism uses the R Squared value, this is obviously a much lower score than anything achieve.
+I am going to include a benchmark test which takes the mean of all the 'y' values in the train dataset and apply to the submission. I received a -0.00039 score. The scoring mechanism uses the R Squared value, this is obviously a much lower score than anything achieve. By using R^2 value is essentially a goodness of fit function. It is a measure of how close the data fits to the regression model. This is a good metric given that we are using a regression model.
 
 For comparisons sake we could use one of the top models presented which has a score of 0.55425 on the private leaderboard by DDgg. Link to their kernel is here : https://www.kaggle.com/tobikaggle/stacked-then-averaged-models-0-5697
 
