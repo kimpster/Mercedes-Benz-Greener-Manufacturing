@@ -9,14 +9,8 @@ Kimpster @ Github (Ryan Chan)
 
 This project is a kaggle competition that was previously presented. The link is here :https://www.kaggle.com/c/mercedes-benz-greener-manufacturing
 
-Below is an abstract from the competition from the link above:
-"Since the first automobile, the Benz Patent Motor Car in 1886, Mercedes-Benz has stood for important automotive innovations. These include, for example, the passenger safety cell with crumple zone, the airbag and intelligent assistance systems. Mercedes-Benz applies for nearly 2000 patents per year, making the brand the European leader among premium car makers. Daimler’s Mercedes-Benz cars are leaders in the premium car industry. With a huge selection of features and options, customers can choose the customized Mercedes-Benz of their dreams. .
+The competition is hosted by Daimler Mercedes Benz they are an automotive company. As their cars have a huge variety in models and specification it takes different times to test all the features and options. In this challenge they would like Kagglers to predict the time it would take on the test bench for given features and options. This will "contribute to speedier testing, resulting in lower carbon dioxide emissions without reducing Daimler’s standards."
 
-To ensure the safety and reliability of each and every unique car configuration before they hit the road, Daimler’s engineers have developed a robust testing system. But, optimizing the speed of their testing system for so many possible feature combinations is complex and time-consuming without a powerful algorithmic approach. As one of the world’s biggest manufacturers of premium cars, safety and efficiency are paramount on Daimler’s production lines.
-
-In this competition, Daimler is challenging Kagglers to tackle the curse of dimensionality and reduce the time that cars spend on the test bench. Competitors will work with a dataset representing different permutations of Mercedes-Benz car features to predict the time it takes to pass testing. Winning algorithms will contribute to speedier testing, resulting in lower carbon dioxide emissions without reducing Daimler’s standards."
-
-Essentially the problem is to predict the time taken on the test bench given the features. The features are essentially different options available for the car.
 
 
 ### Problem Statement
@@ -43,7 +37,7 @@ SRK analyzed the dataset fully and there are no missing values in the train set.
 
 
 ### Solution Statement
-I will attempt to use Deep Learning techniques to attempt to predict the 'y' values of the test set, and submit onto kaggle. Given that there is late submission, although no prizes but it is still useful to see where our prediction model will place. I have decided to attempt using Deep Learning as the course only explored categorical model using deep learning but not regression and I believe this would be well suited to try since the data is simple and clean. Also majority of models used in this kaggle competition used other machine learning techniques such as XGboost and Random Forest and many Cross Fold validation techniques, I would like to see how Deep Learning compares in a regression problem with so many features. In this project I will use Convolution Neural Networks and also MLPs as my prediction models.
+I will attempt to use Deep Learning techniques to attempt to predict the 'y' values of the test set, and submit onto kaggle. Given that there is late submission, although no prizes but it is still useful to see where our prediction model will place. I have decided to attempt using Deep Learning as the course only explored categorical model using deep learning but not regression and I believe this would be well suited to try since the data is simple and clean. Also majority of models used in this kaggle competition used other machine learning techniques such as XGboost and Random Forest and many Cross Fold validation techniques, I would like to see how Deep Learning compares in a regression problem with so many features. In this project I will use MLPs with different layers and architectures as my prediction models.
 
 
 ### Benchmark Model & Evaluation Metrics
@@ -59,14 +53,11 @@ I will try to get as close as possible to their score using Deep Learning techni
 
 ### Project Design
 
-This project will mainly consist of using Keras and Tensorflow for the backend, essentially I will use a CNN to predict the 'y' values. I would probably attempt this without any dimensional reduction at first, and later apply PCA and ICA and compare which resulted in a better prediction model. This is due to the fact that there are so many features and the baseline discussed above actually used many dimension reduction techniques before applying it to XGboost model.
+This project will mainly consist of using Keras and Tensorflow for the backend, essentially I will use a MLPs to predict the 'y' values. I would probably attempt this without any dimensional reduction at first, and later apply PCA and ICA and compare which resulted in a better prediction model. This is due to the fact that there are so many features and the baseline discussed above actually used many dimension reduction techniques before applying it to XGboost model.
 
 First I will remove all the irrelevant features, i.e. those which do not contain any additional information all 0s.
 
-Then I will create the following architectures and check them to see which provides the highest accuracy:
-1. MLP
-2. CNN - similar to VGG16
-3. CNN - Similar to Resnet50
+Then I will create different MLP architectures and check them to see which provides the highest accuracy
 
 I would compare all my findings and optimize base on which creates the best accuracy. I believe if these model are unable to perform well or takes too much time to train I would first do dimensionality reduction and then move on to these models.
 
