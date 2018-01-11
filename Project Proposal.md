@@ -1,5 +1,5 @@
-# Machine Learning Engineer Nanodegree
-## Capstone Proposal - Mercedes Benz Greener Manufacturing
+# Casestudy - Neural Network vs Machine Learning
+## Mercedes Benz Greener Manufacturing
 
 Kimpster @ Github (Ryan Chan)
 4th Aug 2017
